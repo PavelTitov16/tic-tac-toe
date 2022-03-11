@@ -1,7 +1,13 @@
 const field = document.querySelector('.field');
 const squares = document.getElementsByClassName('square');
+
 let turn = 0;
 let result = '';
+
+const modal = document.querySelector('.wrapper-modal');
+const resultWindow = document.getElementsByClassName('content');
+const overlay = document.querySelector('.overlay');
+const closeBtn = document.querySelector('.closeBtn');
 
 field.addEventListener('click', event => {
     if (event.target.className === 'square') {
@@ -38,6 +44,18 @@ const checkWin = () => {
     }
 }
 
-function alertResult(winner) {
-    console.log(winner);
+const alertResult = winner => {
+    resultWindow.innerHTML = `Win ${winner} !`;
+    modal.classList.add('active');
 }
+
+const closeModal = () => {
+    modal.classList.remove('active');
+    location.reload();
+}
+
+overlay.addEventListener('click',closeModal);
+closeBtn.addEventListener('click',closeModal);
+
+
+
