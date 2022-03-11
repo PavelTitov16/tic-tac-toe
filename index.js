@@ -5,7 +5,7 @@ let turn = 0;
 let result = '';
 
 const modal = document.querySelector('.wrapper-modal');
-const resultWindow = document.getElementsByClassName('content');
+const resultWindow = document.querySelector('.content');
 const overlay = document.querySelector('.overlay');
 const closeBtn = document.querySelector('.closeBtn');
 
@@ -56,6 +56,3 @@ const closeModal = () => {
 
 overlay.addEventListener('click',closeModal);
 closeBtn.addEventListener('click',closeModal);
-
-
-
