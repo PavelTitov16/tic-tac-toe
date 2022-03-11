@@ -1,0 +1,19 @@
+.field-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    width: 618px;
+    height: 618px;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 3px solid blueviolet;
+}
